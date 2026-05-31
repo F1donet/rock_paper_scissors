@@ -2,8 +2,7 @@ import ScoreBoard
 import random
 
 a= ScoreBoard.ScoreBoard(player_wins=0, computer_wins=0)
-#print(a.display_score())
-
+score = a.load_score()
 def random_choice():
     return random.choice(["камень", "ножницы", "бумага"])
 
@@ -30,7 +29,10 @@ while True:
     player1 = input("Введите ваш выбор (камень, ножницы, бумага): ").lower()
     if player1 == "выход":
         print("Спасибо за игру!")
+
         print((f"Финальный счет игры: {a.display_score()} "))
+        score.append(a.display_score())
+        a.save_score(score)
         break
     if player1 != "камень" and player1 != "ножницы" and player1 != "бумага":
         continue
