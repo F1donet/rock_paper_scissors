@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ScoreBoard
 import random
 
@@ -48,3 +49,5 @@ while True:
     print(a.display_score())
     if result == "Ничья":
         print("Ничья! Сделай выбор ещё раз!")
+=======
+>>>>>>> main
